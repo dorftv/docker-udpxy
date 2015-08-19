@@ -8,7 +8,5 @@ RUN wget http://www.udpxy.com/download/1_23/udpxy.1.0.23-9-prod.tar.gz
 RUN tar -xzvf udpxy.1.0.23-9-prod.tar.gz
 RUN cd udpxy-1.0.23-9 && make && make install
 
-CMD ["-Tp", "4022", "-B", "16M"]
-
-ENTRYPOINT ["/usr/local/bin/udpxy"]
+CMD ["/usr/local/bin/udpxy", "-T", "-p", "4022"]
 
